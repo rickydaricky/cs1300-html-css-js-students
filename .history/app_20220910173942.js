@@ -47,7 +47,8 @@ const updatePage = async () => {
   // For example, find "name of all fruits whose sugar > 15", 
 
   const newArray = fruitsArray.filter(function (i, n) {
-    return i.genus === 'Citrus';
+    console.log(n['genus'])
+    return n['genus'] === 'Citrus';
   })
 
   console.log('p')
@@ -64,14 +65,14 @@ const updatePage = async () => {
 
   // const newDiv = document.createElement("div");
 
-  ul = document.createElement('ul');
+  ul = document.createElement('div');
 
   gallery.appendChild(ul)
 
   newArray.forEach(item => {
     let li = document.createElement('li');
     ul.appendChild(li);
-    li.innerHTML += item.name;
+    li.innerHTML += item;
   })
 
   // return newArray

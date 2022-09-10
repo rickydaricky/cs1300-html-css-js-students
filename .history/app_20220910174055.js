@@ -71,7 +71,7 @@ const updatePage = async () => {
   newArray.forEach(item => {
     let li = document.createElement('li');
     ul.appendChild(li);
-    li.innerHTML += item.name;
+    li.innerHTML = item;
   })
 
   // return newArray

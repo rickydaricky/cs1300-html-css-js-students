@@ -32,7 +32,6 @@ const apiRequest = async () => {
   // console.log(response);
 
   // Return the response in JSON format
-  console.log('hi');
   return response.json();
 }
 
@@ -47,34 +46,15 @@ const updatePage = async () => {
   // For example, find "name of all fruits whose sugar > 15", 
 
   const newArray = fruitsArray.filter(function (i, n) {
-    return i.genus === 'Citrus';
+    return n.genus==='Citrus';
   })
-
-  console.log('p')
-  console.log(newArray)
 
   // TODO: Create a new HTML element to display your data 
 
-  // let div_elem = document.getElementByClassName("vsc-initialized")
-  // console.log(div_elem)
+  let div_elem = document.getElementByClassName("divle")
 
-  // let first = "p"
   // TODO: Append your new element to the page
-  // div_elem.appendChild(newArray)
-
-  // const newDiv = document.createElement("div");
-
-  ul = document.createElement('ul');
-
-  gallery.appendChild(ul)
-
-  newArray.forEach(item => {
-    let li = document.createElement('li');
-    ul.appendChild(li);
-    li.innerHTML += item.name;
-  })
-
-  // return newArray
+  return newArray
 }
 
 // SAMPLE CODE of how to create and append a new HTML element to the page

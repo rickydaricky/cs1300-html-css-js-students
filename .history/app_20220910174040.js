@@ -64,14 +64,14 @@ const updatePage = async () => {
 
   // const newDiv = document.createElement("div");
 
-  ul = document.createElement('ul');
+  ul = document.createElement('div');
 
   gallery.appendChild(ul)
 
   newArray.forEach(item => {
     let li = document.createElement('li');
     ul.appendChild(li);
-    li.innerHTML += item.name;
+    li.innerHTML = item;
   })
 
   // return newArray
